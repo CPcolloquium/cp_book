@@ -1,0 +1,30 @@
+name: Computational Psychiatry
+navbar:
+  title: Computational Psychiatry
+  left:
+  - text: Home
+    href: index.html
+  - text: 正誤表
+    href: errata.html
+  - text: 生物物理学
+    href: biophysics.html
+  - text: ニューラルネットワーク
+    href: neural_network.html
+  - text: 強化学習
+    href: reinforcement_learning.html
+  - text: ベイズ推論
+    href: bayesian_inference.html
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    toc: yes
+    toc_float: yes
+    df_print: tibble
+    include:
+      after_body: footer.html
+    css: site_style.css
+    lib_dir: site_libs
+    self_contained: no
+output_dir: docs
+
