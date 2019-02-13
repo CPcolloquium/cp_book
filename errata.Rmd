@@ -2,4 +2,8 @@
 title: "正誤表"
 ---
 
-準備中
+|章  |ページ  |行  |　修正前 | 修正後|
+|-|-|-|---|---|
+|5  |80 |図5.1 ||[図5.1](fig/Fig5_1_d_correction.tif)|
+|5  |88-81 |図5.1と式[5.3] |exp(-au+b)|exp(-a(u+b)), [式5.3](fig/equation5.3_correction.pdf)|
+
