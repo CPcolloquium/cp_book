@@ -2,4 +2,10 @@
 title: "ニューラルネットワークモデル"
 ---
 
-準備中
+本書で扱ったニューラルネットワークモデルの中で，公開されているプログラムのソースコードは以下になります。
+
+- [5.6 ニューロン素子の時間スケールの違いにより機能的階層が自己組織化する多時間スケールRNN(MTRNN)](https://groups.oist.jp/cnru/programs-and-data-sets)
+
+- [5.7 RNNの生成ダイナミクスを切り替えるパラメトリックバイアス](https://groups.oist.jp/cnru/programs-and-data-sets)
+
+- [11.6予測精度の推定機能を追加した確率的連続時間RNN(S-CTRNN)](https://github.com/ogata-lab/SCTRNN) 
