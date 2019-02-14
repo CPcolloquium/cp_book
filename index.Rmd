@@ -4,8 +4,18 @@ title: "『計算論的精神医学』のサポートページ"
 
 <br />
 
-最新情報
+### 最新情報
 
-- 2019/02/13 [正誤表](errata.html)をアップデートしました
+- 2019/02/13 [正誤表](errata.html)を更新しました。
+- 2019/02/14 強化学習モデルとニューラルネットワークモデルの情報を更新しました。
+
+<br />
+<br />
+<br />
+
+
+### 『計算論的精神医学』に関連したツイート
+
+<a class="twitter-timeline" data-lang="ja" data-width="400" data-link-color="#19CF86" href="https://twitter.com/akabuchiyk/timelines/1095949639872786433?ref_src=twsrc%5Etfw">CP_Book - Curated tweets by akabuchiyk</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br />
