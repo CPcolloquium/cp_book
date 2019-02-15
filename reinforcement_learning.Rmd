@@ -15,5 +15,5 @@ title: "強化学習モデル"
 - [名古屋大学計算行動科学研究室の資料](https://sites.google.com/site/nagoyacbslab/resource/model-base-analysis)
 
 - [反応時間に対するLinear Ballistic Accumulator modelの資料](https://ykunisato.github.io/lbaStan/lbaStan.html)
-※ LBAなどの逐次サンプリングモデルは強化学習モデルではないですが，強化学習モデルと組み合わせて使用されるケースが出てきているので，こちらのページに置いています。
 
+※ LBAなどの逐次サンプリングモデルは強化学習モデルではないですが，強化学習モデルと組み合わせて使用されることが増えてきているので，こちらで紹介しています。
