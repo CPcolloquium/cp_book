@@ -16,4 +16,4 @@ title: "『計算論的精神医学』のサポートページ"
 
 ### 『計算論的精神医学』に関連したツイート
 
-<a class="twitter-timeline" data-lang="ja" data-width="500" data-partner="tweetdeck" data-theme="dark" data-link-color="#19CF86" href="https://twitter.com/cpsy_j/timelines/1096249814885445633?ref_src=twsrc%5Etfw">計算論的精神医学 - Curated tweets by cpsy_j</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a class="twitter-timeline" data-lang="ja" data-width="450" data-partner="tweetdeck" data-theme="dark" data-link-color="#19CF86" href="https://twitter.com/cpsy_j/timelines/1096249814885445633?ref_src=twsrc%5Etfw">計算論的精神医学 - Curated tweets by cpsy_j</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
