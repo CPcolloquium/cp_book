@@ -2,4 +2,7 @@
 title: "ベイズ推論モデル"
 ---
 
-準備中
+
+### 補足資料
+
+[自由エネルギー原理，能動的推論](fig/ative_inference_suppl.pdf)
