@@ -1,0 +1,161 @@
+---
+title: "CPSYコロキウム"
+---
+
+計算論的精神医学コロキウム(CPSYコロキウム)は，「計算論的精神医学」領域研究者のネットワーク構築・情報交換・ディスッションのための有志の研究会です。
+
+Computational Psychiatry Colloquium (CPSY Colloquium) in Japan
+A volunteer research group for the study of computational psychiatry.
+
+<br />
+
+『計算論的精神医学: 情報処理過程から読み解く精神障害』は，計算論的精神医学コロキウムのコアメンバーが執筆しました。
+
+<br />
+<br />
+
+## 過去の研究会情報
+
+過去の研究会の情報は以下になります。参加にご興味をお持ちのかたはNCNP山下(yamay_at_ncnp_dot_go_dot_jp)までお問い合わせください(現時点では，参加者を大学等の研究機関に所属する研究者に限らせていただいております)。
+
+### 第1回：H27年2月24日＠NCNP
+
+・「計算論的精神医学」研究会開催趣旨
+
+・「計算論的精神医学」の現状
+
+### 第2回：H27年3月26日＠専修大学・生田キャンパス
+
+・論文紹介&強化学習モデルを用いた精神疾患研究
+
+・Collins AG, Frank MJ.
+Opponent actor learning (OpAL): modeling interactive effects of striatal
+dopamine on reinforcement learning and choice incentive.
+Psychol Rev. 2014 Jul;121(3):337-66. doi: 10.1037/a0037015.
+
+### 第3回：H27年4月30日＠専修大学・生田キャンパス
+
+・将来の痛み評価に関わる抑うつの影響：計算論的臨床心理学の観点から
+
+### 第4回：H27年6月19日＠早稲田大学・西早稲田キャンパスキャンパス
+
+・統合失調症のワーキングメモリの障害に関するintegrate-and-fire
+modelを使ってのコンピューテイショナルアプローチ
+
+### 第5回：H27年7月29日＠慶応義塾大学・信濃町キャンパス
+
+・認知神経ロボティクスを用いた精神疾患のモデル
+
+・概説：Fristonの自由エネルギー仮説
+
+### 第6回：H27年9月11日＠専修大学・神田キャンパス
+
+・時系列を学習・表現する神経回路モデル
+
+### 第7回：H27年27年11月20日＠新宿BASE POINT・会議室
+
+・Translational Neuromodelingと精神疾患のComputational assay入門
+
+・Translational Neuromodelingの概要
+
+・Translational Neuromodelingの実際：主にモデルベース解
+析＋RDoCを視野にいれた展開例
+
+### 第8回：H28年28年3月4日＠専修大学サテライトキャンパス
+
+・ベイジアン認知モデリングを用いたメタ認知の定量化
+・Hierarchical Drift-Diffusion Modelの精神疾患への適用
+
+### 第9回：H28年5月13日＠新宿BASE POINT・会議室
+
+・Research Domain Criteria(RDoC)の概要と各ドメインの概観
+米国精神衛生研究所（NIHM）が推進しているResearch Domain Criteria (RDoC)は、精神疾患をカテゴリーで見るのではなく、各次元と分析の単位から捉えようとする試みになる。本発表では、RDoCの概要について説明するとともに、現在提案されている５つのドメインについて説明
+
+### 第10回：H28年7月1日＠東京女子大学
+
+・深層学習をめぐる最近の熱狂
+
+### 第11回：H28年9月9日＠専修大学・生田キャンパス
+
+・「RDoCと臨床診断・症候学との対応について」
+（日本精神神経学会(2017年6月）での発表準備としてクローズドで開催）
+
+・感情障害周辺
+
+・臨床精神医学・症候学の考え方との対応、統合失調症周辺
+
+・次元的-カテゴリー的各手法の利点欠点について数理的な観点から
+
+・精神病理学・疾病論的な視点から
+
+### 第12回：H29年2月24日＠新宿BASE POINT・会議室
+・「Computational Psychiatry: New Perspectives on Mental Illness」を読む
+（第13回CPSYコロキウムの準備としてクローズドで開催）
+
+H28年12月に出版された以下の書籍を分担通読し、全体を通じた 内容の把握・情報交換を行いました。
+
+Computational Psychiatry: New Perspectives on Mental Illness(MIT Press, 2016 Dec)
+by A. David Redish (Editor), Joshua A. Gordon (Editor)
+
+### 第13回　H29年3月17日(金)＠専修大学サテライトキャンパス
+
+・「Computational Psychiatry入門」
+
+H28年12月に出版された
+Computational Psychiatry: New Perspectives on Mental Illness
+by A. David Redish and Joshua A. Gordon (Eds)
+MIT Press, 2016 Dec
+の内容のうち、入門的な内容として以下を紹介しました。
+
+・現在の精神医学研究における問題と計算論の貢献可能性についての概論（主にChap1, 2, 17)
+
+・計算論的精神医学の基本的な方法のレビュー(Chap5を中心に）
+
+### 第14回-18回
+
+・『計算論的精神医学: 情報処理過程から読み解く精神障害』準備としてクローズドで開催しました。
+
+
+### 第19回：H30年8月31日＠専修大学・神田キャンパス
+
+・「Recurrent neural network(RNN)を備えたロボットと健常者/発達障害者の模倣インタラクションの解析」
+
+### 第20回：H30年12月19日（水）＠新宿ビジネスルーム
+
+・「レビー小体病の幻覚：病的体験の現象学と神経科学」 
+
+レビー小体型認知症に特徴的な幻覚についての臨床神経学、神経科学的レビューに加えて、この病的体験を計算論的観点から議論することを試みました。
+
+### 第21回：H31年3月1日（金）＠新宿BASE POINT・会議室
+
+・「計算論的精神医学」（勁草書房2019）の概要紹介とQ&A
+http://www.keisoshobo.co.jp/book/b383336.html
+
+・「社会的意思決定を支える脳計算」
+社会的意思決定の神経基盤について、機能的脳イメージング（fMRI）と計算論的アプローチを組み合わせて迫った研究を紹介いただき、精神疾患との関係や病態理解の可能性などについても議論を試みました。
+
+### 第22回：H31年4月19日（金）＠NCNP
+
+・「価値忘却による学習率の擬似調整効果」
+
+・「忘却過程を含む強化学習モデルを用いたモデルフリー・モデルベースシステム比重の推定」
+
+・「依存症への計算論的アプローチ」
+
+
+### 第23回：令和元年8月26日(月)＠新宿BASE POINT・会議室
+
+・「うつ病の理解と克服をめざしたデータ駆動的アプローチ」
+
+
+### 第24回：令和元年10月4日(金)＠新宿
+
+・「ディープラーニングを用いた精神疾患患者の脳波の解析」
+
+### 第25回：令和２年1月24日（金)＠NCNP
+
+・「オープンサイエンスの動向と計算論的アプローチ」
+
+・「Computational Psychiatry Research Mapping
+
+・「community-augmented CPSYに参加しよう！- CPRMベータ版試用ワークショップ」

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>CPSYコロキウム</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="site_style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Computational Psychiatry</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="errata.html">正誤表</a>
+</li>
+<li>
+  <a href="biophysics.html">生物物理学</a>
+</li>
+<li>
+  <a href="neural_network.html">ニューラルネットワーク</a>
+</li>
+<li>
+  <a href="reinforcement_learning.html">強化学習</a>
+</li>
+<li>
+  <a href="bayesian_inference.html">ベイズ推論</a>
+</li>
+<li>
+  <a href="cpsy_colloquium.html">CPSYコロキウム</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">CPSYコロキウム</h1>
+
+</div>
+
+
+<p>計算論的精神医学コロキウム(CPSYコロキウム)は，「計算論的精神医学」領域研究者のネットワーク構築・情報交換・ディスッションのための有志の研究会です。</p>
+<p>Computational Psychiatry Colloquium (CPSY Colloquium) in Japan A volunteer research group for the study of computational psychiatry.</p>
+<p><br /></p>
+<p>『計算論的精神医学: 情報処理過程から読み解く精神障害』は，計算論的精神医学コロキウムのコアメンバーが執筆しました。</p>
+<p><br /> <br /></p>
+<div id="過去の研究会情報" class="section level2">
+<h2>過去の研究会情報</h2>
+<p>過去の研究会の情報は以下になります。参加にご興味をお持ちのかたはNCNP山下(yamay_at_ncnp_dot_go_dot_jp)までお問い合わせください(現時点では，参加者を大学等の研究機関に所属する研究者に限らせていただいております)。</p>
+<div id="第1回h27年2月24日ncnp" class="section level3">
+<h3>第1回：H27年2月24日＠NCNP</h3>
+<p>・「計算論的精神医学」研究会開催趣旨</p>
+<p>・「計算論的精神医学」の現状</p>
+</div>
+<div id="第2回h27年3月26日専修大学生田キャンパス" class="section level3">
+<h3>第2回：H27年3月26日＠専修大学・生田キャンパス</h3>
+<p>・論文紹介&amp;強化学習モデルを用いた精神疾患研究</p>
+<p>・Collins AG, Frank MJ. Opponent actor learning (OpAL): modeling interactive effects of striatal dopamine on reinforcement learning and choice incentive. Psychol Rev. 2014 Jul;121(3):337-66. doi: 10.1037/a0037015.</p>
+</div>
+<div id="第3回h27年4月30日専修大学生田キャンパス" class="section level3">
+<h3>第3回：H27年4月30日＠専修大学・生田キャンパス</h3>
+<p>・将来の痛み評価に関わる抑うつの影響：計算論的臨床心理学の観点から</p>
+</div>
+<div id="第4回h27年6月19日早稲田大学西早稲田キャンパスキャンパス" class="section level3">
+<h3>第4回：H27年6月19日＠早稲田大学・西早稲田キャンパスキャンパス</h3>
+<p>・統合失調症のワーキングメモリの障害に関するintegrate-and-fire modelを使ってのコンピューテイショナルアプローチ</p>
+</div>
+<div id="第5回h27年7月29日慶応義塾大学信濃町キャンパス" class="section level3">
+<h3>第5回：H27年7月29日＠慶応義塾大学・信濃町キャンパス</h3>
+<p>・認知神経ロボティクスを用いた精神疾患のモデル</p>
+<p>・概説：Fristonの自由エネルギー仮説</p>
+</div>
+<div id="第6回h27年9月11日専修大学神田キャンパス" class="section level3">
+<h3>第6回：H27年9月11日＠専修大学・神田キャンパス</h3>
+<p>・時系列を学習・表現する神経回路モデル</p>
+</div>
+<div id="第7回h27年27年11月20日新宿base-point会議室" class="section level3">
+<h3>第7回：H27年27年11月20日＠新宿BASE POINT・会議室</h3>
+<p>・Translational Neuromodelingと精神疾患のComputational assay入門</p>
+<p>・Translational Neuromodelingの概要</p>
+<p>・Translational Neuromodelingの実際：主にモデルベース解 析＋RDoCを視野にいれた展開例</p>
+</div>
+<div id="第8回h28年28年3月4日専修大学サテライトキャンパス" class="section level3">
+<h3>第8回：H28年28年3月4日＠専修大学サテライトキャンパス</h3>
+<p>・ベイジアン認知モデリングを用いたメタ認知の定量化 ・Hierarchical Drift-Diffusion Modelの精神疾患への適用</p>
+</div>
+<div id="第9回h28年5月13日新宿base-point会議室" class="section level3">
+<h3>第9回：H28年5月13日＠新宿BASE POINT・会議室</h3>
+<p>・Research Domain Criteria(RDoC)の概要と各ドメインの概観 米国精神衛生研究所（NIHM）が推進しているResearch Domain Criteria (RDoC)は、精神疾患をカテゴリーで見るのではなく、各次元と分析の単位から捉えようとする試みになる。本発表では、RDoCの概要について説明するとともに、現在提案されている５つのドメインについて説明</p>
+</div>
+<div id="第10回h28年7月1日東京女子大学" class="section level3">
+<h3>第10回：H28年7月1日＠東京女子大学</h3>
+<p>・深層学習をめぐる最近の熱狂</p>
+</div>
+<div id="第11回h28年9月9日専修大学生田キャンパス" class="section level3">
+<h3>第11回：H28年9月9日＠専修大学・生田キャンパス</h3>
+<p>・「RDoCと臨床診断・症候学との対応について」 （日本精神神経学会(2017年6月）での発表準備としてクローズドで開催）</p>
+<p>・感情障害周辺</p>
+<p>・臨床精神医学・症候学の考え方との対応、統合失調症周辺</p>
+<p>・次元的-カテゴリー的各手法の利点欠点について数理的な観点から</p>
+<p>・精神病理学・疾病論的な視点から</p>
+</div>
+<div id="第12回h29年2月24日新宿base-point会議室" class="section level3">
+<h3>第12回：H29年2月24日＠新宿BASE POINT・会議室</h3>
+<p>・「Computational Psychiatry: New Perspectives on Mental Illness」を読む （第13回CPSYコロキウムの準備としてクローズドで開催）</p>
+<p>H28年12月に出版された以下の書籍を分担通読し、全体を通じた 内容の把握・情報交換を行いました。</p>
+<p>Computational Psychiatry: New Perspectives on Mental Illness(MIT Press, 2016 Dec) by A. David Redish (Editor), Joshua A. Gordon (Editor)</p>
+</div>
+<div id="第13回h29年3月17日金専修大学サテライトキャンパス" class="section level3">
+<h3>第13回　H29年3月17日(金)＠専修大学サテライトキャンパス</h3>
+<p>・「Computational Psychiatry入門」</p>
+<p>H28年12月に出版された Computational Psychiatry: New Perspectives on Mental Illness by A. David Redish and Joshua A. Gordon (Eds) MIT Press, 2016 Dec の内容のうち、入門的な内容として以下を紹介しました。</p>
+<p>・現在の精神医学研究における問題と計算論の貢献可能性についての概論（主にChap1, 2, 17)</p>
+<p>・計算論的精神医学の基本的な方法のレビュー(Chap5を中心に）</p>
+</div>
+<div id="第14回-18回" class="section level3">
+<h3>第14回-18回</h3>
+<p>・『計算論的精神医学: 情報処理過程から読み解く精神障害』準備としてクローズドで開催しました。</p>
+</div>
+<div id="第19回h30年8月31日専修大学神田キャンパス" class="section level3">
+<h3>第19回：H30年8月31日＠専修大学・神田キャンパス</h3>
+<p>・「Recurrent neural network(RNN)を備えたロボットと健常者/発達障害者の模倣インタラクションの解析」</p>
+</div>
+<div id="第20回h30年12月19日水新宿ビジネスルーム" class="section level3">
+<h3>第20回：H30年12月19日（水）＠新宿ビジネスルーム</h3>
+<p>・「レビー小体病の幻覚：病的体験の現象学と神経科学」</p>
+<p>レビー小体型認知症に特徴的な幻覚についての臨床神経学、神経科学的レビューに加えて、この病的体験を計算論的観点から議論することを試みました。</p>
+</div>
+<div id="第21回h31年3月1日金新宿base-point会議室" class="section level3">
+<h3>第21回：H31年3月1日（金）＠新宿BASE POINT・会議室</h3>
+<p>・「計算論的精神医学」（勁草書房2019）の概要紹介とQ&amp;A <a href="http://www.keisoshobo.co.jp/book/b383336.html" class="uri">http://www.keisoshobo.co.jp/book/b383336.html</a></p>
+<p>・「社会的意思決定を支える脳計算」 社会的意思決定の神経基盤について、機能的脳イメージング（fMRI）と計算論的アプローチを組み合わせて迫った研究を紹介いただき、精神疾患との関係や病態理解の可能性などについても議論を試みました。</p>
+</div>
+<div id="第22回h31年4月19日金ncnp" class="section level3">
+<h3>第22回：H31年4月19日（金）＠NCNP</h3>
+<p>・「価値忘却による学習率の擬似調整効果」</p>
+<p>・「忘却過程を含む強化学習モデルを用いたモデルフリー・モデルベースシステム比重の推定」</p>
+<p>・「依存症への計算論的アプローチ」</p>
+</div>
+<div id="第23回令和元年8月26日月新宿base-point会議室" class="section level3">
+<h3>第23回：令和元年8月26日(月)＠新宿BASE POINT・会議室</h3>
+<p>・「うつ病の理解と克服をめざしたデータ駆動的アプローチ」</p>
+</div>
+<div id="第24回令和元年10月4日金新宿" class="section level3">
+<h3>第24回：令和元年10月4日(金)＠新宿</h3>
+<p>・「ディープラーニングを用いた精神疾患患者の脳波の解析」</p>
+</div>
+<div id="第25回令和年1月24日金ncnp" class="section level3">
+<h3>第25回：令和２年1月24日（金)＠NCNP</h3>
+<p>・「オープンサイエンスの動向と計算論的アプローチ」</p>
+<p>・「Computational Psychiatry Research Mapping</p>
+<p>・「community-augmented CPSYに参加しよう！- CPRMベータ版試用ワークショップ」</p>
+</div>
+</div>
+
+<footer>
+  <p>Copyright &copy; 2018 CPSYコロキウム. All rights reserved </p>
+</footer>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

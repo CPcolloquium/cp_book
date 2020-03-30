@@ -14,6 +14,8 @@ navbar:
     href: reinforcement_learning.html
   - text: ベイズ推論
     href: bayesian_inference.html
+  - text: CPSYコロキウム
+    href: cpsy_colloquium.html
 output:
   html_document:
     theme: cosmo
