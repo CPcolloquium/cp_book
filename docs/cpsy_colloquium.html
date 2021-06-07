@@ -13,12 +13,22 @@
 
 <title>CPSYコロキウム</title>
 
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -26,12 +36,16 @@
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
-<style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -44,32 +58,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="site_style.css" type="text/css" />
 
@@ -80,10 +69,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -100,40 +85,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -161,7 +119,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -173,7 +131,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -184,10 +142,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -199,7 +170,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -325,13 +295,13 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
+<div class="row">
+<div class="col-sm-12 col-md-4 col-lg-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+<div class="toc-content col-sm-12 col-md-8 col-lg-9">
 
 
 
@@ -377,7 +347,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -389,8 +359,39 @@ div.tocify {
 <p>計算論的精神医学コロキウム(CPSYコロキウム)は，「計算論的精神医学」領域研究者のネットワーク構築・情報交換・ディスッションのための有志の研究会です。</p>
 <p>Computational Psychiatry Colloquium (CPSY Colloquium) in Japan A volunteer research group for the study of computational psychiatry.</p>
 <p><br /></p>
-<p>『計算論的精神医学: 情報処理過程から読み解く精神障害』は，計算論的精神医学コロキウムのコアメンバーが執筆しました。</p>
-<p><br /> <br /></p>
+<div id="お知らせ" class="section level2">
+<h2>お知らせ</h2>
+<div id="cpsyカフェ2021" class="section level3">
+<h3>CPSYカフェ2021</h3>
+<p>計算論的精神医学（CPSY）研究をしてみたい！という方々にむけて、現在CPSY研究に取り組むポスドク・大学院生の先輩を囲んで情報交換する座談会を開催します。</p>
+<p>例えば、こんな疑問にお答えします。</p>
+<ul>
+<li>CPSY研究はどこでできますか？（研究室・大学院進学情報）</li>
+<li>どんなCPSY研究をしていますか？</li>
+<li>どうしてCPSY研究を志したんですか？</li>
+</ul>
+<p>開催概要</p>
+<ul>
+<li>参加資格：CPSY研究を志す学生・社会人の方（先着30名）</li>
+<li>日時：2021年6月18日(金)17:00～</li>
+<li>場所：ZOOMによるオンライン開催</li>
+<li>主催：計算論的精神医学コロキウム</li>
+<li>問合せ連絡先：computationalpsychiatryjapan（以降Gmailのアドレス）</li>
+<li>参加方法：下記リンクより所属（身分）・氏名・メールアドレスを記入の上お申し込みください。参加登録いただくと、前日までに登録のメールアドレスにZOOMリンクを送ります。</li>
+</ul>
+<p><a href="https://forms.gle/u4E16xEbFfEWSnmX7" class="uri">https://forms.gle/u4E16xEbFfEWSnmX7</a></p>
+<p>ホスト側参加予定者</p>
+<ul>
+<li>宗田卓史(医科歯科D3)</li>
+<li>加藤郁佳（理研CBS）</li>
+<li>遠山朝子（学振PD）</li>
+<li>片平健太郎（産総研）</li>
+<li>国里愛彦（専修大）</li>
+<li>山下祐一（NCNP）</li>
+</ul>
+<p><br /> <br /> <br /></p>
+</div>
+</div>
 <div id="過去の研究会情報" class="section level2">
 <h2>過去の研究会情報</h2>
 <p>過去の研究会の情報は以下になります。参加にご興味をお持ちのかたはNCNP山下(yamay_at_ncnp_dot_go_dot_jp)までお問い合わせください(現時点では，参加者を大学等の研究機関に所属する研究者に限らせていただいております)。</p>
@@ -453,7 +454,7 @@ div.tocify {
 <p>H28年12月に出版された以下の書籍を分担通読し、全体を通じた 内容の把握・情報交換を行いました。</p>
 <p>Computational Psychiatry: New Perspectives on Mental Illness(MIT Press, 2016 Dec) by A. David Redish (Editor), Joshua A. Gordon (Editor)</p>
 </div>
-<div id="第13回h29年3月17日金専修大学サテライトキャンパス" class="section level3">
+<div id="第13回-h29年3月17日金専修大学サテライトキャンパス" class="section level3">
 <h3>第13回　H29年3月17日(金)＠専修大学サテライトキャンパス</h3>
 <p>・「Computational Psychiatry入門」</p>
 <p>H28年12月に出版された Computational Psychiatry: New Perspectives on Mental Illness by A. David Redish and Joshua A. Gordon (Eds) MIT Press, 2016 Dec の内容のうち、入門的な内容として以下を紹介しました。</p>
@@ -492,7 +493,7 @@ div.tocify {
 <h3>第24回：令和元年10月4日(金)＠新宿</h3>
 <p>・「ディープラーニングを用いた精神疾患患者の脳波の解析」</p>
 </div>
-<div id="第25回令和年1月24日金ncnp" class="section level3">
+<div id="第25回令和２年1月24日金ncnp" class="section level3">
 <h3>第25回：令和２年1月24日（金)＠NCNP</h3>
 <p>・「オープンサイエンスの動向と計算論的アプローチ」</p>
 <p>・「Computational Psychiatry Research Mapping</p>
@@ -514,7 +515,7 @@ div.tocify {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -532,7 +533,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
@@ -553,7 +554,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
