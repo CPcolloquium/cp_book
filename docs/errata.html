@@ -13,8 +13,8 @@
 
 <title>正誤表</title>
 
-<script src="site_libs/header-attrs-2.6.6/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="site_style.css" type="text/css" />
 
 
@@ -84,6 +85,12 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
 }
 </style>
 
@@ -138,11 +145,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -293,12 +304,12 @@ div.tocify {
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row">
-<div class="col-sm-12 col-md-4 col-lg-3">
+<div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -306,7 +317,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -392,63 +403,79 @@ div.tocify {
 <td>88-81</td>
 <td>図5.1と式[5.3]</td>
 <td>exp(-au+b)</td>
-<td>exp(-a(u+b)), <a href="fig/equation5.3_correction.pdf">式5.3</a></td>
+<td>exp(-a(u+b)), <a
+href="fig/equation5.3_correction.pdf">式5.3</a></td>
 </tr>
 <tr class="even">
+<td>5</td>
+<td>91</td>
+<td>式[5.7]</td>
+<td><span class="math inline">\(u_{i}(t+1)=(1-\frac{1}{\tau})u_{i}(t) +
+\frac{1}{\tau}[\Sigma_{j}w_{c_{i}{x_{j}}}x_{j}(t) +
+\Sigma_{j}w_{c_{i}c_{j}C_{j}(t-1)}]\)</span></td>
+<td><span class="math inline">\(u_{i}(t+1)=(1-\frac{1}{\tau})u_{i}(t) +
+\frac{1}{\tau}[\Sigma_{j}w_{c_{i}{x_{j}}}x_{j}(t+1) +
+\Sigma_{j}w_{c_{i}c_{j}C_{j}(t)}]\)</span></td>
+</tr>
+<tr class="odd">
 <td>6</td>
 <td>116</td>
 <td>図6.5</td>
 <td>状態S3の右側のV(3)</td>
 <td>V(s3)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>6</td>
 <td>118</td>
 <td>図6.6</td>
 <td>状態S3の右側のV(3)</td>
 <td>V(s3)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>6</td>
 <td>126</td>
 <td>図6.8a</td>
 <td>下方の「報酬確立」</td>
 <td>「報酬確率」</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>6</td>
 <td>127</td>
 <td>8行</td>
 <td>「これらの具体的な計算方法はコラム6に記した」</td>
 <td>「これらの具体的な計算方法はコラム7に記した」</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>7</td>
 <td>135</td>
 <td>11行目</td>
 <td>(この公式の導出についてはコラム1参照)</td>
 <td>(この公式の導出についてはコラム8参照)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>11</td>
 <td>219</td>
 <td>図11.5</td>
 <td></td>
 <td><a href="fig/Figure11-5_corrected.tif">図11.5</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>10</td>
 <td>198</td>
 <td>8行</td>
 <td>コンダクタス</td>
 <td>コンダクタンス</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>付録</td>
 <td>292</td>
 <td>11行</td>
-<td>事前分布の平均<span class="math inline">\(\hat{\mu}_{t+1}\)</span>，分散<span class="math inline">\(\hat{\sigma}^2_{t+1}\)</span>は</td>
-<td>事前分布の平均<span class="math inline">\(\hat{\mu}^{(t+1)}\)</span>，分散<span class="math inline">\(\hat{\sigma}^{2(t+1)}\)</span>は</td>
+<td>事前分布の平均<span
+class="math inline">\(\hat{\mu}_{t+1}\)</span>，分散<span
+class="math inline">\(\hat{\sigma}^2_{t+1}\)</span>は</td>
+<td>事前分布の平均<span
+class="math inline">\(\hat{\mu}^{(t+1)}\)</span>，分散<span
+class="math inline">\(\hat{\sigma}^{2(t+1)}\)</span>は</td>
 </tr>
 </tbody>
 </table>
@@ -478,10 +505,12 @@ div.tocify {
 <td>279</td>
 <td>[7.21]式</td>
 <td><span class="math display">\[
-\mu=\frac{\hat{\sigma}_{x}^{2} y+\hat{\sigma}_{y}^{2} \hat{\mu}}{\hat{\sigma}_{x}^{2}+\sigma_{y}^{2}}
+\mu=\frac{\hat{\sigma}_{x}^{2} y+\hat{\sigma}_{y}^{2}
+\hat{\mu}}{\hat{\sigma}_{x}^{2}+\sigma_{y}^{2}}
 \]</span>　</td>
 <td><span class="math display">\[
-\mu=\frac{\hat{\sigma}_{x}^{2} y+\sigma_{y}^{2} \hat{\mu}}{\hat{\sigma}_{x}^{2}+\sigma_{y}^{2}}
+\mu=\frac{\hat{\sigma}_{x}^{2} y+\sigma_{y}^{2}
+\hat{\mu}}{\hat{\sigma}_{x}^{2}+\sigma_{y}^{2}}
 \]</span></td>
 </tr>
 </tbody>
@@ -529,6 +558,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')
