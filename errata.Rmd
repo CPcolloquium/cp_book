@@ -9,7 +9,6 @@ title: "正誤表"
 |4  |73 | 3行,式[4.10] | |[式4.10](fig/equation4.10_correction.pdf)|
 |5  |80 |図5.1 ||[図5.1](fig/Fig5_1_d_correction.tif)|
 |5  |88-81 |図5.1と式[5.3] |exp(-au+b)|exp(-a(u+b)), [式5.3](fig/equation5.3_correction.pdf)|
-|5  |91|式[5.7] |$u_{i}(t+1)=(1-\frac{1}{\tau})u_{i}(t) + \frac{1}{\tau}[\Sigma_{j}w_{c_{i}{x_{j}}}x_{j}(t) + \Sigma_{j}w_{c_{i}c_{j}C_{j}(t-1)}]$ | $u_{i}(t+1)=(1-\frac{1}{\tau})u_{i}(t) + \frac{1}{\tau}[\Sigma_{j}w_{c_{i}{x_{j}}}x_{j}(t+1) + \Sigma_{j}w_{c_{i}c_{j}C_{j}(t)}]$ |
 |6  |116|図6.5 |状態S3の右側のV(3)|V(s3)|
 |6  |118|図6.6 |状態S3の右側のV(3)|V(s3)|
 |6 |126| 図6.8a| 下方の「報酬確立」|「報酬確率」|
@@ -23,6 +22,7 @@ title: "正誤表"
 
 |章  |ページ  |行  |　修正前 | 修正後|
 |-|-|-|---|---|
+|5  |91|式[5.7] |$u_{i}(t+1)=(1-\frac{1}{\tau})u_{i}(t) + \frac{1}{\tau}[\Sigma_{j}w_{c_{i}{x_{j}}}x_{j}(t) + \Sigma_{j}w_{c_{i}c_{j}C_{j}(t-1)}]$ | $u_{i}(t+1)=(1-\frac{1}{\tau})u_{i}(t) + \frac{1}{\tau}[\Sigma_{j}w_{c_{i}{x_{j}}}x_{j}(t+1) + \Sigma_{j}w_{c_{i}c_{j}C_{j}(t)}]$ |
 |付録|279|[7.21]式| $$
 \mu=\frac{\hat{\sigma}_{x}^{2} y+\hat{\sigma}_{y}^{2} \hat{\mu}}{\hat{\sigma}_{x}^{2}+\sigma_{y}^{2}}
 $$　| $$
